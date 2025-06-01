@@ -17,13 +17,15 @@ public class Main {
         ContaInvestimento minhaConta = new ContaInvestimento(titular1, 123, 987);
         minhaConta.depositar(15_000);
         minhaConta.sacar(1_000);
+        minhaConta.debitarTarifaMensal();
         minhaConta.creditarRendimentos(0.8);
 
         ContaEspecial suaConta = new ContaEspecial(titular2,222, 333, 1_000);
         suaConta.depositar(15_000);
         suaConta.sacar(15_500);
+        suaConta.debitarTarifaMensal();
 
+        caixaEletronico.imprimirSaldo(minhaConta);
         caixaEletronico.imprimirSaldo(suaConta);
-
     }
 }

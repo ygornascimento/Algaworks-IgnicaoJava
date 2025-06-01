@@ -1,6 +1,6 @@
 package com.example.model;
 
-public class Conta {
+public abstract class Conta {
     private Pessoa titular;
     private int agencia;
     private int numero;
@@ -35,6 +35,8 @@ public class Conta {
     public double getSaldo() {
         return saldo;
     }
+
+    public abstract void debitarTarifaMensal();
 
     public void depositar(double valor) {
         if (valor <= 0) {
